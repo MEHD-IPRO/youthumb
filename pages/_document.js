@@ -26,6 +26,12 @@ class MyDocument extends Document {
 
           {/* Add your JavaScript code here */}
           <script src="https://alfad.pro/go/266933/701092"></script>
+
+          {/* Add the <meta> tag here */}
+          <meta
+            name="monetag"
+            content="6596f208aa34ec05d641bff84dd45858"
+          />
         </Head>
         <body>
           <Main />

@@ -32,6 +32,14 @@ class MyDocument extends Document {
             name="monetag"
             content="6596f208aa34ec05d641bff84dd45858"
           />
+
+          {/* Add the new <script> tag here */}
+          <script
+            src="https://alwingulla.com/88/tag.min.js"
+            data-zone="11318"
+            async
+            data-cfasync="false"
+          ></script>
         </Head>
         <body>
           <Main />

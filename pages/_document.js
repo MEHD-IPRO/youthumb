@@ -33,6 +33,18 @@ class MyDocument extends Document {
 
           {/* Add the third provided script tag here */}
           <script type="text/javascript" src="//pl20691510.highcpmrevenuegate.com/c1/01/55/c101558b689533d487877dc298f2ec4a.js"></script>
+
+          {/* Add the fourth provided script tag here */}
+          <script type="text/javascript">
+            atOptions = {
+              'key' : 'deb194919e9b256d89abb7d5c7aa350a',
+              'format' : 'iframe',
+              'height' : 250,
+              'width' : 300,
+              'params' : {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/deb194919e9b256d89abb7d5c7aa350a/invoke.js"></scr' + 'ipt>');
+          </script>
         </Head>
         <body>
           <Main />

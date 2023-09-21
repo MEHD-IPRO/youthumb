@@ -40,6 +40,11 @@ class MyDocument extends Document {
             async
             data-cfasync="false"
           ></script>
+
+          {/* Add the provided code snippet here */}
+          <script async="async" data-cfasync="false" src="//pl20691408.highcpmrevenuegate.com/f37be7919807e7658d1ecac4cbb7f670/invoke.js"></script>
+          <div id="container-f37be7919807e7658d1ecac4cbb7f670"></div>
+
         </Head>
         <body>
           <Main />

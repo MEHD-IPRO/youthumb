@@ -2,6 +2,14 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
   render() {
+    const atOptions = {
+      key: 'deb194919e9b256d89abb7d5c7aa350a',
+      format: 'iframe',
+      height: 250,
+      width: 300,
+      params: {}
+    };
+
     return (
       <Html lang="en">
         <Head>
@@ -36,14 +44,10 @@ class MyDocument extends Document {
 
           {/* Add the fourth provided script tag here */}
           <script type="text/javascript">
-            atOptions = {
-              'key' : 'deb194919e9b256d89abb7d5c7aa350a',
-              'format' : 'iframe',
-              'height' : 250,
-              'width' : 300,
-              'params' : {}
-            };
-            document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/deb194919e9b256d89abb7d5c7aa350a/invoke.js"></scr' + 'ipt>');
+            {`
+              atOptions = ${JSON.stringify(atOptions)};
+              document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/deb194919e9b256d89abb7d5c7aa350a/invoke.js"></scr' + 'ipt>');
+            `}
           </script>
         </Head>
         <body>

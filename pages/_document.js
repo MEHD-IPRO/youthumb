@@ -33,8 +33,18 @@ class MyDocument extends Document {
           <link rel="manifest" href="/favicon/site.webmanifest" />
 
           {/* Add the provided script tag */}
-          <script async="async" data-cfasync="false" src="//pl20691408.highcpmrevenuegate.com/f37be7919807e7658d1ecac4cbb7f670/invoke.js"></script>
-          <div id="container-f37be7919807e7658d1ecac4cbb7f670"></div>
+          <script type="text/javascript">
+            {`
+              var atOptions = {
+                'key' : '2288353876086512976a0a6367405128',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+              };
+              document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/2288353876086512976a0a6367405128/invoke.js"></scr' + 'ipt>');
+            `}
+          </script>
 
           {/* Rest of your script tags */}
           {/* <script type="text/javascript" src="//pl20691510.highcpmrevenuegate.com/c1/01/55/c101558b689533d487877dc298f2ec4a.js"></script> */}

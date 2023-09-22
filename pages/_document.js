@@ -32,7 +32,7 @@ class MyDocument extends Document {
           />
           <link rel="manifest" href="/favicon/site.webmanifest" />
 
-          {/* Add the first provided script tag here */}
+          {/* Add the provided script tag here */}
           <script async="async" data-cfasync="false" src="//pl20691408.highcpmrevenuegate.com/f37be7919807e7658d1ecac4cbb7f670/invoke.js"></script>
           <div id="container-f37be7919807e7658d1ecac4cbb7f670"></div>
 

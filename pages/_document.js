@@ -42,9 +42,6 @@ class MyDocument extends Document {
           {/* Add the second provided script tag here */}
           <script type="text/javascript" src="//pl20691510.highcpmrevenuegate.com/c1/01/55/c101558b689533d487877dc298f2ec4a.js"></script>
 
-          {/* Add the third provided script tag here */}
-          <script type="text/javascript" src="//pl20691510.highcpmrevenuegate.com/c1/01/55/c101558b689533d487877dc298f2ec4a.js"></script>
-
           {/* Add the fourth provided script tag here */}
           <script type="text/javascript" dangerouslySetInnerHTML={{ __html: `
             var atOptions = ${JSON.stringify(atOptions)};

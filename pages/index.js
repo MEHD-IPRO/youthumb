@@ -1,11 +1,12 @@
 import { useState } from "react";
+import copy from "copy-to-clipboard";
 
 const Index = () => {
   const [videoURL, setVideoURL] = useState("");
   const [thumbnailOptions, setThumbnailOptions] = useState([]);
 
   const getYouTubeThumbnail = (url) => {
-    let regExp = /.(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]).*/;
+    let regExp = /.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/;
     let match = url.match(regExp);
 
     if (match && match[1].length === 11) {
@@ -30,16 +31,6 @@ const Index = () => {
     } else {
       setThumbnailOptions([]);
     }
-  };
-
-  const downloadImage = (url) => {
-    // Create an anchor element and trigger a click to download the image
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "thumbnail.jpg";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
   };
 
   return (
@@ -76,9 +67,9 @@ const Index = () => {
                 <img src={option.url} alt={`Thumbnail ${index + 1}`} />
                 <button
                   className="btn-blue mt-2"
-                  onClick={() => downloadImage(option.url)}
+                  onClick={() => copy(option.url)}
                 >
-                  Download Image
+                  Copy Image URL
                 </button>
               </div>
             ))}
@@ -89,4 +80,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Index;sss

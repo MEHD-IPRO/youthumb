@@ -1,6 +1,8 @@
-import "../styles/index.css";
 import { Fragment } from "react";
 import { DefaultSeo } from "next-seo";
+import Head from 'next/head'; // Import Head
+import '../styles/index.css'; // Import your global styles
+import '../styles/popup.css'; // Import the popup styles
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -16,6 +18,7 @@ function MyApp({ Component, pageProps }) {
           site_name: "Youtube Thumbnail Downloader",
         }}
       />
+
       <Component {...pageProps} />
     </Fragment>
   );

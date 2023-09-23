@@ -1,11 +1,18 @@
-const getYouTubeThumbnail = (url) => {
-  let regExp = /.(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]).*/;
-  let match = url.match(regExp);
+// Initialize variables
+let videoURL = "";
+let thumbnailOptions = [];
 
-  if (match && match[1].length === 11) {
-    const videoURL = match[1];
+// Function to extract video ID from YouTube URL
+function getYouTubeVideoId(url) {
+  let match = url.match(/.(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]).*/);
+  return match && match[1].length === 11 ? match[1] : null;
+}
+
+// Function to fetch thumbnail options
+function getYouTubeThumbnail(url) {
+  const videoId = getYouTubeVideoId(url);
+  if (videoId) {
     const thumbnailBaseUrl = "http://img.youtube.com/vi/";
-
     const options = [
       { resolution: "HD (1280x720)", code: "maxresdefault" },
       { resolution: "SD (640x480)", code: "sddefault" },
@@ -14,36 +21,37 @@ const getYouTubeThumbnail = (url) => {
       { resolution: "Low (120x90)", code: "default" },
     ];
 
-    const thumbnailOptions = options.map((option) => ({
+    thumbnailOptions = options.map((option) => ({
       resolution: option.resolution,
-      url: `${thumbnailBaseUrl}${videoURL}/${option.code}.jpg`,
+      url: `${thumbnailBaseUrl}${videoId}/${option.code}.jpg`,
     }));
-
-    setThumbnailOptions(thumbnailOptions);
-    setVideoURL("");
   } else {
-    setThumbnailOptions([]);
+    thumbnailOptions = [];
   }
-};
+}
 
-const downloadImage = (url) => {
+// Function to download an image
+function downloadImage(url) {
   const link = document.createElement("a");
   link.href = url;
   link.download = "thumbnail.jpg";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
-};
+}
 
+// Event listener for clicking the "Download Thumbnails" button
 document.querySelector(".btn-blue").addEventListener("click", () => {
-  getYouTubeThumbnail(document.querySelector("input").value);
+  const input = document.querySelector("input");
+  videoURL = input.value;
+  getYouTubeThumbnail(videoURL);
 });
 
-const thumbnailOptions = document.querySelectorAll(".thumbnail-option");
-
-thumbnailOptions.forEach((option, index) => {
-  option.querySelector("button").addEventListener("click", () => {
-    const imageUrl = option.querySelector("img").src;
+// Event listeners for clicking the "Download Image" buttons
+const thumbnailButtons = document.querySelectorAll(".btn-blue");
+thumbnailButtons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    const imageUrl = thumbnailOptions[index].url;
     downloadImage(imageUrl);
   });
 });

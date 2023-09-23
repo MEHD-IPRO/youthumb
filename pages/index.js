@@ -1,12 +1,13 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import copy from "copy-to-clipboard";
 
 const Index = () => {
   const [videoURL, setVideoURL] = useState("");
   const [thumbnailOptions, setThumbnailOptions] = useState([]);
+  const [showPopup, setShowPopup] = useState(false); // Added state for the popup
 
   const getYouTubeThumbnail = (url) => {
-    let regExp = /.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/;
+    let regExp = /.(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]).*/;
     let match = url.match(regExp);
 
     if (match && match[1].length === 11) {
@@ -31,6 +32,11 @@ const Index = () => {
     } else {
       setThumbnailOptions([]);
     }
+  };
+
+  // Function to toggle the popup
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
   };
 
   return (
@@ -76,6 +82,18 @@ const Index = () => {
           </div>
         </div>
       )}
+      
+      {/* Privacy Policy Popup */}
+      <div className={`popup ${showPopup ? 'show' : ''}`}>
+        <div className="popup-content">
+          <span className="close" onClick={togglePopup}>&times;</span>
+          <p>
+            By using this website, you agree to our <a href="https://www.termsfeed.com/live/6c24d6a5-fc70-4b4c-b4f0-edf8107e45bf" target="_blank">Privacy Policy</a>.
+          </p>
+        </div>
+      </div>
+      {/* Button to show/hide the Privacy Policy Popup */}
+      <button id="showPopupButton" onClick={togglePopup}>Show Privacy Policy</button>
     </div>
   );
 };

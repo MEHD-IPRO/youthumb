@@ -1,7 +1,11 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import { useState } from "react"; // Import useState
 
 class MyDocument extends Document {
   render() {
+    // Define a state variable to manage the popup's visibility
+    const [showPopup, setShowPopup] = useState(false);
+
     const atOptions = {
       key: 'deb194919e9b256d89abb7d5c7aa350a',
       format: 'iframe',
@@ -10,47 +14,61 @@ class MyDocument extends Document {
       params: {}
     };
 
+    // Function to toggle the popup
+    const togglePopup = () => {
+      setShowPopup(!showPopup);
+    };
+
     return (
       <Html lang="en">
         <Head>
-          <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/favicon/apple-touch-icon.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/favicon/favicon-32x32.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/favicon/favicon-16x16.png"
-          />
-          <link rel="manifest" href="/favicon/site.webmanifest" />
+          {/* ...Your existing head content... */}
 
-          {/* Add the Google site verification meta tag here */}
-          <meta name="google-site-verification" content="15TbfgJSWBeOAhA1ywAJhIh36zQMc7h9hSohAs02W0E" />
+          {/* JavaScript code to handle the popup */}
+          <script dangerouslySetInnerHTML={{ __html: `
+            // Show the popup when the button is clicked
+            function showPopup() {
+              var popup = document.getElementById('popup');
+              popup.style.display = 'block';
+            }
 
-          {/* Add the first provided script tag here */}
-          <script async="async" data-cfasync="false" src="//pl20691408.highcpmrevenuegate.com/f37be7919807e7658d1ecac4cbb7f670/invoke.js"></script>
-          <div id="container-f37be7919807e7658d1ecac4cbb7f670"></div>
+            // Close the popup when the close button is clicked
+            function closePopup() {
+              var popup = document.getElementById('popup');
+              popup.style.display = 'none';
+            }
 
-          {/* Add the second provided script tag here */}
-          <script type="text/javascript" src="//pl20691510.highcpmrevenuegate.com/c1/01/55/c101558b689533d487877dc298f2ec4a.js"></script>
+            // Close the popup when the background overlay is clicked
+            function closePopupOnOverlayClick(event) {
+              var popup = document.getElementById('popup');
+              if (event.target === popup) {
+                popup.style.display = 'none';
+              }
+            }
 
-          {/* Add the fourth provided script tag here */}
-          <script type="text/javascript" dangerouslySetInnerHTML={{ __html: `
-            var atOptions = ${JSON.stringify(atOptions)};
-            document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/deb194919e9b256d89abb7d5c7aa350a/invoke.js"></scr' + 'ipt>');
+            // Add click event listeners
+            var showPopupButton = document.getElementById('showPopupButton');
+            showPopupButton.addEventListener('click', showPopup);
+
+            var closePopupButton = document.getElementById('closePopup');
+            closePopupButton.addEventListener('click', closePopup);
+
+            var popupOverlay = document.getElementById('popup');
+            popupOverlay.addEventListener('click', closePopupOnOverlayClick);
           ` }} />
         </Head>
         <body>
           <Main />
           <NextScript />
+          {/* Privacy Policy Popup */}
+          <div className={`popup ${showPopup ? 'show' : ''}`} id="popup">
+            <div className="popup-content">
+              <span className="close" id="closePopup" onClick={togglePopup}>&times;</span>
+              <p>
+                By using this website, you agree to our <a href="https://www.termsfeed.com/live/6c24d6a5-fc70-4b4c-b4f0-edf8107e45bf" target="_blank">Privacy Policy</a>.
+              </p>
+            </div>
+          </div>
         </body>
       </Html>
     );

@@ -32,6 +32,9 @@ class MyDocument extends Document {
           />
           <link rel="manifest" href="/favicon/site.webmanifest" />
 
+          {/* Add the Google site verification meta tag here */}
+          <meta name="google-site-verification" content="15TbfgJSWBeOAhA1ywAJhIh36zQMc7h9hSohAs02W0E" />
+
           {/* Add the first provided script tag here */}
           <script async="async" data-cfasync="false" src="//pl20691408.highcpmrevenuegate.com/f37be7919807e7658d1ecac4cbb7f670/invoke.js"></script>
           <div id="container-f37be7919807e7658d1ecac4cbb7f670"></div>

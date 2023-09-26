@@ -23,6 +23,20 @@ class MyDocument extends Document {
             href="/favicon/favicon-16x16.png"
           />
           <link rel="manifest" href="/favicon/site.webmanifest" />
+
+          {/* Add the script here */}
+          <script type="text/javascript" dangerouslySetInnerHTML={{
+            __html: `
+              atOptions = {
+                'key': '2288353876086512976a0a6367405128',
+                'format': 'iframe',
+                'height': 60,
+                'width': 468,
+                'params': {}
+              };
+              document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/2288353876086512976a0a6367405128/invoke.js"></scr' + 'ipt>');
+            `,
+          }}></script>
         </Head>
         <body>
           <Main />

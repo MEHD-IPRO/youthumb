@@ -25,18 +25,7 @@ class MyDocument extends Document {
           <link rel="manifest" href="/favicon/site.webmanifest" />
 
           {/* Add the script here */}
-          <script type="text/javascript" dangerouslySetInnerHTML={{
-            __html: `
-              atOptions = {
-                'key': '2288353876086512976a0a6367405128',
-                'format': 'iframe',
-                'height': 60,
-                'width': 468,
-                'params': {}
-              };
-              document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/2288353876086512976a0a6367405128/invoke.js"></scr' + 'ipt>');
-            `,
-          }}></script>
+          <script type='text/javascript' src='//pl20691510.highcpmrevenuegate.com/c1/01/55/c101558b689533d487877dc298f2ec4a.js'></script>
         </Head>
         <body>
           <Main />

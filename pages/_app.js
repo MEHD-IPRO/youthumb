@@ -2,7 +2,6 @@ import { Fragment } from "react";
 import { DefaultSeo } from "next-seo";
 import Head from 'next/head'; // Import Head
 import '../styles/index.css'; // Import your global styles
-import '../styles/popup.css'; // Import the popup styles
 
 function MyApp({ Component, pageProps }) {
   return (

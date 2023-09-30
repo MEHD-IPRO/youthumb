@@ -24,7 +24,18 @@ class MyDocument extends Document {
           />
           <link rel="manifest" href="/favicon/site.webmanifest" />
 
-          {/* Add the script here */}
+          {/* Google Analytics */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-VNGG8BWZ34"></script>
+          <script>
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-VNGG8BWZ34');
+            `}
+          </script>
+
+          {/* RevenueGate script */}
           <script type='text/javascript' src='//pl20691510.highcpmrevenuegate.com/c1/01/55/c101558b689533d487877dc298f2ec4a.js'></script>
         </Head>
         <body>

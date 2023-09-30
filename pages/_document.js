@@ -37,6 +37,20 @@ class MyDocument extends Document {
 
           {/* RevenueGate script */}
           <script type='text/javascript' src='//pl20691510.highcpmrevenuegate.com/c1/01/55/c101558b689533d487877dc298f2ec4a.js'></script>
+
+          {/* Additional script */}
+          <script type="text/javascript">
+            {`
+              atOptions = {
+                'key' : '9c5952cc07ada187887cb16326cac1e8',
+                'format' : 'iframe',
+                'height' : 600,
+                'width' : 160,
+                'params' : {}
+              };
+              document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/9c5952cc07ada187887cb16326cac1e8/invoke.js"></scr' + 'ipt>');
+            `}
+          </script>
         </Head>
         <body>
           <Main />

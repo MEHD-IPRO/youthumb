@@ -37,6 +37,9 @@ class MyDocument extends Document {
 
           {/* RevenueGate script */}
           <script type='text/javascript' src='//pl20691510.highcpmrevenuegate.com/c1/01/55/c101558b689533d487877dc298f2ec4a.js'></script>
+
+          {/* Additional script */}
+          <script type='text/javascript' src='//pl20789890.highcpmrevenuegate.com/ea/3a/68/ea3a68606133f017fc8ac6af678b932e.js'></script>
         </Head>
         <body>
           {/* Your provided script and div */}

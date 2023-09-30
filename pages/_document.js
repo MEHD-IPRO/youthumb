@@ -67,7 +67,7 @@ class MyDocument extends Document {
           </script>
         </Head>
         <body>
-          <a href=""><img alt="banner" src="https://landings-cdn.adsterratech.com/referralBanners/gif/720x90_adsterra_reff.gif" /></a>
+          <a href=""><img alt="banner" src="https://landings-cdn.adsterratech.com/referralBanners/gif/160x600_adsterra_reff.gif" /></a>
           <Main />
           <NextScript />
         </body>

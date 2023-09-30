@@ -67,12 +67,12 @@ class MyDocument extends Document {
           </script>
         </Head>
         <body>
-          {/* Native Banner */}
+          <Main />
+          <NextScript />
+          {/* Centered Banner */}
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
             <a href=""><img alt="banner" src="https://landings-cdn.adsterratech.com/referralBanners/gif/700x90_adsterra_reff.gif" /></a>
           </div>
-          <Main />
-          <NextScript />
         </body>
       </Html>
     );

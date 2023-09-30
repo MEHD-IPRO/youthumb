@@ -38,7 +38,7 @@ class MyDocument extends Document {
           {/* RevenueGate script */}
           <script type='text/javascript' src='//pl20691510.highcpmrevenuegate.com/c1/01/55/c101558b689533d487877dc298f2ec4a.js'></script>
 
-          {/* Additional script */}
+          {/* Additional script 1 */}
           <script type="text/javascript">
             {`
               atOptions = {
@@ -49,6 +49,20 @@ class MyDocument extends Document {
                 'params' : {}
               };
               document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/9c5952cc07ada187887cb16326cac1e8/invoke.js"></scr' + 'ipt>');
+            `}
+          </script>
+
+          {/* Additional script 2 */}
+          <script type="text/javascript">
+            {`
+              atOptions = {
+                'key' : '2288353876086512976a0a6367405128',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+              };
+              document.write('<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/2288353876086512976a0a6367405128/invoke.js"></scr' + 'ipt>');
             `}
           </script>
         </Head>

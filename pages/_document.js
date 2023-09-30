@@ -39,6 +39,9 @@ class MyDocument extends Document {
           <script type='text/javascript' src='//pl20691510.highcpmrevenuegate.com/c1/01/55/c101558b689533d487877dc298f2ec4a.js'></script>
         </Head>
         <body>
+          {/* Your provided script and div */}
+          <script async="async" data-cfasync="false" src="//pl20691408.highcpmrevenuegate.com/f37be7919807e7658d1ecac4cbb7f670/invoke.js"></script>
+          <div id="container-f37be7919807e7658d1ecac4cbb7f670"></div>
           <Main />
           <NextScript />
         </body>
